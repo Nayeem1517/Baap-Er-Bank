@@ -17,10 +17,10 @@ console.log(password)
 //DANGER :: DO NOT VARIFY EMAIL AND PASSWORD IN THE CLINT SIDE
 //Step-04: verify the email and password
 if( email === 'rebonya@gmail.com' && password === 'nayeem'){
-    console.log('valid User')
+ window.location.href = 'bank.html'
 }
 else {
-    console.log('Invalid user')
+    alert('Tui Password Vhule Gesos ,Tui Tejjo Ajke Theke');
 }
 
 })
