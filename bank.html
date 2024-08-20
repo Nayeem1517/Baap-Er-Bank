@@ -5,37 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baper Money</title>
-     <!-- Connecting the Tailwind Css link  -->
-     <script src="https://cdn.tailwindcss.com"></script>
-     <!-- Connecting the Daisy Ui -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
-     <script src="https://cdn.tailwindcss.com"></script>
- 
+    <!-- Connecting the Tailwind Css link  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Connecting the Daisy Ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
     <header>
-        <h1 class="text-5xl text-center mt-6 font-semibold text-violet-600">Let's Get Some <span class="text-red-400 font-bold"> Moooooney</span></h1>
+        <h1 class="text-5xl text-center mt-6 font-semibold text-violet-600">Let's Get Some <span
+                class="text-red-400 font-bold"> Moooooney</span></h1>
     </header>
     <main>
-        <section >
+        <section>
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto mt-10">
                 <div class="bg-green-400 p-8 rounded-xl text-white ">
-                    <h4 class="text-2xl">Deposite</h4>
-                    <h2 class="text-5xl">$00</h2>
+                    <h4  class="text-2xl font-bold">Deposite</h4>
+                    <h2  class="text-5xl">$ <span id="deposit-total">  00 </span> </h2>
                 </div>
                 <div class="bg-yellow-400 p-8 rounded-xl text-white ">
-                    <h4 class="text-2xl">Withdraw</h4>
+                    <h4 class="text-2xl font-bold">Withdraw</h4>
                     <h2 class="text-5xl">$00</h2>
                 </div>
                 <div class="bg-violet-400 p-8 rounded-xl text-white ">
-                    <h4 class="text-2xl">Balance</h4>
-                    <h2 class="text-5xl">$1200</h2>
+                    <h4 class="text-2xl font-bold">Balance</h4>
+                    <h2  class="text-5xl">$ <span id="balance-total">1200</span> </h2>
                 </div>
-              
+
+            </div>
+        </section>
+        <!-- Creating the Deposit and Withdraw section  -->
+        <section>
+            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto mt-10">
+            <div class="bg-fuchsia-400 p-8 rounded-xl text-white ">
+                <h4 class="text-2xl font-bold mb-4">Please Deposit</h4>
+                <input id="user-deposit" class="w-9/12 block mb-4 p-3" type="text" placeholder="$ Enter Your Amount to Deposit">
+                <button id="btn-deposit" class="bg-amber-600 hover:bg-sky-700 px-8 py-2 font-bold text-white rounded-lg">Deposit</button>
+                
+            </div>
+            <div class="bg-sky-400 p-8 rounded-xl text-white ">
+                <h4 class="text-2xl mb-4 font-bold">Please Withdraw</h4>
+                <input id="user-withdraw" class="w-9/12 block mb-4 p-3" type="text" placeholder="$ Enter Your Amonut to Withdraw">
+                <button id="btn-withdraw" class="bg-violet-700 hover:bg-red-700 px-8 py-2 font-bold text-white rounded-lg">Withdraw</button>
+            </div>
             </div>
         </section>
     </main>
+    <script src="js/deposit.js"></script>
 </body>
 
 </html>
