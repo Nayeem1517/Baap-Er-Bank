@@ -17,14 +17,21 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
   const previousWithdrawAmount = document.getElementById('withdraw-amount');
   const previouswithdrawAmountString = previousWithdrawAmount.innerText;
   const previouswithdrawing = parseFloat(previouswithdrawAmountString);
-// step-04
-const currentWithdrawAmount = previouswithdrawing + newWithdrawAmount ;
-// step-05
-previousWithdrawAmount.innerText = currentWithdrawAmount;
+
 //step-06:
 const withdrawTotalBalance = document.getElementById('balance-total');
 const previousBalanceuptoWithdrawString = withdrawTotalBalance.innerText;
 const previousBalanceuptoWithdraw = parseFloat(previousBalanceuptoWithdrawString);
+if(newWithdrawAmount > previousBalanceuptoWithdraw){
+    alert('Insufficient Balance');
+    return;
+}
+
+// Steps Gula Akhne Dewar Karon Hocche Withdraw Section Ta ke Updated Rakhar jonno .eta Age Dile Withdraw value ta update hoye jai jeta amra chai na
+// step-04
+const currentWithdrawAmount = previouswithdrawing + newWithdrawAmount ;
+// step-05
+previousWithdrawAmount.innerText = currentWithdrawAmount;
 const currentWithdraw = previousBalanceuptoWithdraw - newWithdrawAmount;
  withdrawTotalBalance.innerText = currentWithdraw;
 //step-07:
